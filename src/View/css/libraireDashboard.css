@@ -1,0 +1,47 @@
+/* ================================================
+   🎨 Libraire Dashboard
+   ================================================ */
+
+AnchorPane {
+    -fx-background-color: linear-gradient(to bottom right, #f8fafc, #eef2f6);
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* 🏷️ Titre principal */
+.dashboard-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e293b;
+}
+
+/* 🔘 Boutons libraire */
+.libraire-button {
+    -fx-background-color: #fc4a1a;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-background-radius: 10;
+    -fx-padding: 10 25;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 4, 0, 0, 2);
+    -fx-min-width: 250;
+    -fx-transition: 0.3s;
+}
+
+.libraire-button:hover {
+    -fx-background-color: #ff6f3c;
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+/* 🔗 Lien retour */
+.back-link {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2563eb;
+    -fx-cursor: hand;
+}
+
+.back-link:hover {
+    -fx-underline: true;
+    -fx-text-fill: #1d4ed8;
+}

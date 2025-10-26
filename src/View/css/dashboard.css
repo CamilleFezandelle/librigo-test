@@ -1,0 +1,211 @@
+.account-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.account-number-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #666666;
+    -fx-font-style: italic;
+}
+
+.book-card {
+    -fx-background-color: #2b2b2b;
+    -fx-background-radius: 10;
+    -fx-padding: 15;
+    -fx-spacing: 20;
+    -fx-alignment: CENTER_LEFT;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2);
+}
+
+.book-card:hover {
+    -fx-background-color: #333333;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 4);
+}
+
+.book-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.book-author, .book-year {
+    -fx-text-fill: #cccccc;
+}
+
+.book-availability {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.book-available {
+    -fx-text-fill: #4caf50;
+}
+
+.book-unavailable {
+    -fx-text-fill: #f44336;
+}
+
+.book-button {
+    -fx-background-color: #0078d7;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 5 15;
+    -fx-pref-width: 80px;
+    -fx-pref-height: 30px;
+    -fx-max-width: 80px;
+    -fx-max-height: 30px;
+    -fx-min-width: 80px;
+    -fx-min-height: 30px;
+}
+
+.book-button:hover {
+    -fx-background-color: #005fa3;
+}
+
+/* ==============================
+   🔗 Bouton "Se déconnecter"
+   ============================== */
+.logout-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #d9534f;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+    -fx-cursor: hand;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.logout-button:hover {
+    -fx-text-fill: #b52b27;
+}
+
+.account-button {
+    -fx-background-color: #4a90e2;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 5 15;
+}
+
+.account-button:hover {
+    -fx-background-color: #357abd;
+}
+
+.libraire-button {
+    -fx-background-color: #fc4a1a;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 5 15;
+}
+
+.libraire-button:hover {
+    -fx-background-color: #d63a12;
+}
+
+
+/* ==========================================================
+   🎚️ ComboBox (liste déroulante des genres)
+   ========================================================== */
+.combo-box {
+    -fx-background-color: #2b2b2b;
+    -fx-background-radius: 8;
+    -fx-border-color: #3c3c3c;
+    -fx-border-radius: 8;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-padding: 4 8;
+    -fx-cursor: hand;
+}
+
+.combo-box:hover {
+    -fx-background-color: #353535;
+    -fx-border-color: #4d4d4d;
+}
+
+/* ✅ supprime le carré bleu du focus */
+.combo-box:focused,
+.combo-box-base:focused,
+.combo-box .text-field:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* supprime le fond bleu dans la zone affichée */
+.combo-box .list-cell:selected {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+/* conserve le fond bleu uniquement dans la liste déroulante */
+.combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: #0078d7;
+    -fx-text-fill: white;
+}
+
+/* flèche déroulante */
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.combo-box .arrow {
+    -fx-background-color: #aaaaaa;
+}
+
+.combo-box:hover .arrow {
+    -fx-background-color: #ffffff;
+}
+
+/* cellules du menu */
+.list-cell {
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 13px;
+}
+
+.list-cell:hover {
+    -fx-background-color: #3b3b3b;
+}
+
+.list-cell:selected {
+    -fx-background-color: #0078d7;
+    -fx-text-fill: white;
+}
+
+/* texte d’invite (placeholder) */
+.combo-box .text-field {
+    -fx-prompt-text-fill: #aaaaaa;
+}
+
+/* ==============================
+   🔍 Barre de recherche
+   ============================== */
+.search-field {
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: #e0e0e0;
+    -fx-border-color: #3c3c3c;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-pref-height: 36px;
+    -fx-font-size: 14px;
+    -fx-padding: 0 12;
+    -fx-prompt-text-fill: #aaaaaa;
+    -fx-cursor: text;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 4, 0, 0, 1);
+    -fx-transition: all 0.2s ease-in-out;
+}
+
+.search-field:focused {
+    -fx-background-color: #353535;
+    -fx-border-color: #0078d7;
+    -fx-effect: dropshadow(gaussian, rgba(0,120,215,0.25), 10, 0, 0, 2);
+}
+
+
+

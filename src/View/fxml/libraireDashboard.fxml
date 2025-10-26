@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controller.LibraireDashboardController"
+            prefWidth="900" prefHeight="600"
+            stylesheets="@../css/libraireDashboard.css">
+
+    <children>
+
+        <!-- 📦 Conteneur principal centré -->
+        <VBox alignment="CENTER"
+              spacing="25"
+              layoutX="0" layoutY="0"
+              prefWidth="900" prefHeight="600">
+
+            <!-- 🏷️ Titre -->
+            <Label text="Espace Libraire"
+                   styleClass="dashboard-title" />
+
+            <!-- 🔘 Boutons -->
+            <VBox spacing="15" alignment="CENTER">
+                <Button text="➕  Ajouter un élément"
+                        fx:id="ajouterButton"
+                        onAction="#handleAjouterButtonAction"
+                        styleClass="libraire-button"/>
+
+                <Button text="📚  Liste des livres"
+                        fx:id="livresButton"
+                        styleClass="libraire-button"/>
+
+                <Button text="📖  Liste des emprunts"
+                        fx:id="empruntsButton"
+                        styleClass="libraire-button"/>
+            </VBox>
+
+            <!-- 🔗 Retour à l’accueil -->
+            <Hyperlink text="⬅ Retour à l’accueil"
+                       fx:id="retourAccueil"
+                       styleClass="back-link"/>
+        </VBox>
+
+    </children>
+</AnchorPane>

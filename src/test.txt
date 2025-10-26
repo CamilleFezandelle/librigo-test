@@ -1,0 +1,29 @@
+        for (Livre livre : livres) {
+            Button btn = new Button(livre.getTitre());
+            btn.setOnAction(event -> {
+                System.out.println("----------------------------------------");
+                System.out.println("Id : " + livre.getId());
+                System.out.println("Titre : " + livre.getTitre());
+                System.out.println("Auteur : " + livre.getAuteurId() + " - " + livre.getAuteurNom() + " " + livre.getAuteurPrenom());
+                System.out.println("Genre : " + livre.getGenreId() + " - " + livre.getGenreNom());
+                System.out.println("Date de parution : " + livre.getDateParution());
+                System.out.println("Description : " + livre.getDescription());
+                System.out.println("Image : " + livre.getImage());
+                System.out.println("Disponibilité : " + (livre.getDisponibilite() == 1 ? "Disponible" : "Indisponible"));
+            });
+
+            genreContainer.getChildren().add(btn);
+        }
+
+        for (Genre genre : genres) {
+            System.out.println(genre);
+        }
+
+        for (Genre genre : genres) {
+            Button btn = new Button(genre.getNom());
+            btn.setOnAction(event -> {
+                System.out.println("Genre sélectionné : " + genre.getId() + " - " + genre.getNom());
+            });
+
+            genreContainer.getChildren().add(btn);
+        }

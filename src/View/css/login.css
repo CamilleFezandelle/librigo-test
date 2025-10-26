@@ -1,0 +1,133 @@
+/* ==============================
+   🌤️ Fond global
+   ============================== */
+.root-pane {
+    -fx-background-color: linear-gradient(to bottom right, #f8fafc, #e9eef3);
+    -fx-font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+/* ==============================
+   🖼️ Partie gauche (logo)
+   ============================== */
+.left-pane {
+    -fx-background-color: #f1f5fb;
+    -fx-alignment: center;
+    -fx-border-color: #dce3eb;
+    -fx-border-width: 0 1 0 0;
+}
+
+/* ==============================
+   📦 Formulaire de connexion
+   ============================== */
+.login-box {
+    -fx-background-color: #ffffff;
+    -fx-padding: 40 50;
+    -fx-background-radius: 12;
+    -fx-spacing: 20;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0, 0, 3);
+}
+
+/* ==============================
+   🏷️ Titre
+   ============================== */
+.title-label {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 0 0 10 0;
+}
+
+/* ==============================
+   🧠 Champs texte & mot de passe
+   ============================== */
+.text-field, .password-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #c9d3e1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-pref-width: 260px;
+    -fx-pref-height: 35px;
+    -fx-font-size: 14px;
+    -fx-padding: 0 10;
+    -fx-text-fill: #2c3e50;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #4a90e2;
+    -fx-background-color: #f9fbff;
+}
+
+/* ==============================
+   🔘 Bouton principal
+   ============================== */
+#loginButton {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-pref-width: 150px;
+    -fx-pref-height: 35px;
+    -fx-font-size: 14px;
+}
+
+#loginButton:hover {
+    -fx-background-color: #357abd;
+}
+
+/* ==============================
+   🔗 Lien "Mot de passe oublié ?"
+   ============================== */
+#forgotPasswordButton {
+    -fx-background-color: transparent;
+    -fx-text-fill: #4a90e2;
+    -fx-underline: true;
+    -fx-font-weight: normal;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+    -fx-padding: 0;
+}
+
+#forgotPasswordButton:hover {
+    -fx-text-fill: #2f5c9e;
+}
+
+/* ==============================
+   🟥 Message d’erreur
+   ============================== */
+#errorLabel {
+    -fx-text-fill: #d93025;
+    -fx-font-size: 13px;
+    -fx-font-style: italic;
+}
+
+/* ==============================
+   ➖ Séparateur
+   ============================== */
+.divider {
+    -fx-background-color: #dce3eb;
+    -fx-opacity: 0.7;
+}
+
+/* ==============================
+   ✳️ Section inscription
+   ============================== */
+.register-text {
+    -fx-text-fill: #666666;
+    -fx-font-size: 13px;
+}
+
+#registerButton {
+    -fx-background-color: transparent;
+    -fx-text-fill: #4a90e2;
+    -fx-underline: true;
+    -fx-font-weight: normal;
+    -fx-cursor: hand;
+    -fx-font-size: 13px;
+    -fx-padding: 0;
+}
+
+#registerButton:hover {
+    -fx-text-fill: #2f5c9e;
+}
