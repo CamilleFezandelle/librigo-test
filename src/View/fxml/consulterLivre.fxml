@@ -8,32 +8,27 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="Controller.LivreController"
             prefWidth="900" prefHeight="600"
-            stylesheets="@../css/consulterLivre.css"
+            stylesheets="@../css/global.css, @../css/consulterLivre.css"
             styleClass="root-pane">
 
     <VBox alignment="CENTER" spacing="40" prefWidth="900" prefHeight="600">
 
-        <!-- Titre -->
         <Label fx:id="bookTitle"
                wrapText="true"
                maxWidth="700"
                styleClass="page-title"/>
 
-        <!-- Carte principale -->
         <HBox spacing="30" alignment="CENTER" styleClass="book-card" prefWidth="700" prefHeight="400">
             <padding>
                 <Insets top="30" right="30" bottom="30" left="30"/>
             </padding>
 
-            <!-- Partie gauche -->
             <VBox spacing="20" prefWidth="350">
                 <Label text="Informations générales" styleClass="section-title"/>
 
                 <GridPane hgap="10" vgap="8">
                     <columnConstraints>
-                        <!-- Première colonne : libellés à droite -->
                         <ColumnConstraints halignment="RIGHT" minWidth="120"/>
-                        <!-- Deuxième colonne : valeurs à gauche -->
                         <ColumnConstraints halignment="LEFT" minWidth="150"/>
                     </columnConstraints>
 
@@ -53,12 +48,10 @@
                     <Label fx:id="bookAvailability" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
                 </GridPane>
 
-                <!-- Boutons -->
                 <Button fx:id="borrowButton" text="📚 Emprunter" styleClass="borrow-button" onAction="#handleBorrowButton" />
                 <Button fx:id="backButton" text="◀ Retourner au catalogue" styleClass="back-button" onAction="#handleBackButton" />
             </VBox>
 
-            <!-- Partie droite -->
             <VBox spacing="10" prefWidth="320">
                 <Label text="Description" styleClass="section-title"/>
                 <TextArea fx:id="bookDescription"

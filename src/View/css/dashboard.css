@@ -1,3 +1,7 @@
+/* ==============================
+   DASHBOARD.CSS - Styles spécifiques
+   ============================== */
+
 .account-label {
     -fx-font-size: 16px;
     -fx-font-weight: bold;
@@ -38,14 +42,6 @@
     -fx-font-weight: bold;
 }
 
-.book-available {
-    -fx-text-fill: #4caf50;
-}
-
-.book-unavailable {
-    -fx-text-fill: #f44336;
-}
-
 .book-button {
     -fx-background-color: #0078d7;
     -fx-text-fill: white;
@@ -64,9 +60,6 @@
     -fx-background-color: #005fa3;
 }
 
-/* ==============================
-   🔗 Bouton "Se déconnecter"
-   ============================== */
 .logout-button {
     -fx-background-color: transparent;
     -fx-text-fill: #d9534f;
@@ -109,10 +102,6 @@
     -fx-background-color: #d63a12;
 }
 
-
-/* ==========================================================
-   🎚️ ComboBox (liste déroulante des genres)
-   ========================================================== */
 .combo-box {
     -fx-background-color: #2b2b2b;
     -fx-background-radius: 8;
@@ -129,7 +118,6 @@
     -fx-border-color: #4d4d4d;
 }
 
-/* ✅ supprime le carré bleu du focus */
 .combo-box:focused,
 .combo-box-base:focused,
 .combo-box .text-field:focused {
@@ -137,19 +125,16 @@
     -fx-faint-focus-color: transparent;
 }
 
-/* supprime le fond bleu dans la zone affichée */
 .combo-box .list-cell:selected {
     -fx-background-color: transparent;
     -fx-text-fill: white;
 }
 
-/* conserve le fond bleu uniquement dans la liste déroulante */
 .combo-box-popup .list-view .list-cell:selected {
     -fx-background-color: #0078d7;
     -fx-text-fill: white;
 }
 
-/* flèche déroulante */
 .combo-box .arrow-button {
     -fx-background-color: transparent;
 }
@@ -162,7 +147,6 @@
     -fx-background-color: #ffffff;
 }
 
-/* cellules du menu */
 .list-cell {
     -fx-background-color: #2b2b2b;
     -fx-text-fill: #e0e0e0;
@@ -178,14 +162,10 @@
     -fx-text-fill: white;
 }
 
-/* texte d’invite (placeholder) */
 .combo-box .text-field {
     -fx-prompt-text-fill: #aaaaaa;
 }
 
-/* ==============================
-   🔍 Barre de recherche
-   ============================== */
 .search-field {
     -fx-background-color: #2b2b2b;
     -fx-text-fill: #e0e0e0;
@@ -198,7 +178,6 @@
     -fx-prompt-text-fill: #aaaaaa;
     -fx-cursor: text;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 4, 0, 0, 1);
-    -fx-transition: all 0.2s ease-in-out;
 }
 
 .search-field:focused {
@@ -206,6 +185,3 @@
     -fx-border-color: #0078d7;
     -fx-effect: dropshadow(gaussian, rgba(0,120,215,0.25), 10, 0, 0, 2);
 }
-
-
-

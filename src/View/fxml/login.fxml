@@ -10,35 +10,30 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="Controller.LoginController"
             prefHeight="600.0" prefWidth="900.0"
-            stylesheets="@../css/login.css"
+            stylesheets="@../css/global.css, @../css/login.css"
             styleClass="root-pane">
 
     <HBox prefWidth="900" prefHeight="600">
 
-        <!-- Partie gauche : logo -->
         <StackPane prefWidth="450" styleClass="left-pane">
             <ImageView fitWidth="200" preserveRatio="true">
                 <Image url="@/images/logo.png" />
             </ImageView>
         </StackPane>
 
-        <!-- Partie droite : formulaire -->
-        <VBox alignment="CENTER" spacing="20" prefWidth="450" styleClass="login-box">
+        <VBox alignment="CENTER" spacing="20" prefWidth="450" styleClass="form-box">
 
-            <!-- Bloc supérieur : Connexion -->
             <VBox alignment="CENTER" spacing="15">
                 <Label text="Connexion à mon espace" styleClass="title-label" />
                 <TextField fx:id="emailField" promptText="Adresse email" />
                 <PasswordField fx:id="passwordField" promptText="Mot de passe" />
                 <Button fx:id="loginButton" text="Se connecter" onAction="#handleLoginButton" />
                 <Button fx:id="forgotPasswordButton" text="Mot de passe oublié ?" onAction="#handleForgotPasswordLink" />
-                <Label fx:id="errorLabel" textFill="red" wrapText="true" />
+                <Label fx:id="errorLabel" wrapText="true" />
             </VBox>
 
-            <!-- Trait de séparation -->
             <Separator prefWidth="260" styleClass="divider" />
 
-            <!-- Bloc inférieur : Inscription -->
             <VBox alignment="CENTER" spacing="5">
                 <padding>
                     <Insets top="10" right="10" bottom="10" left="10"/>

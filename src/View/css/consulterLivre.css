@@ -1,26 +1,7 @@
 /* ==============================
-   🌤️ Fond global
+   CONSULTER LIVRE.CSS - Styles spécifiques
    ============================== */
-.root-pane {
-    -fx-background-color: linear-gradient(to bottom right, #f8fafc, #e9eef3);
-    -fx-font-family: "Segoe UI", "Roboto", sans-serif;
-}
 
-/* ==============================
-   🏷️ Titre principal
-   ============================== */
-.page-title {
-    -fx-font-size: 26px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #2c3e50;
-    -fx-text-alignment: center;
-    -fx-wrap-text: true;
-    -fx-max-width: 700;
-}
-
-/* ==============================
-   📦 Carte principale
-   ============================== */
 .book-card {
     -fx-background-color: #ffffff;
     -fx-background-radius: 12;
@@ -33,19 +14,6 @@
     -fx-pref-height: 320;
 }
 
-/* ==============================
-   📚 Sections
-   ============================== */
-.section-title {
-    -fx-font-size: 15px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #2c3e50;
-    -fx-padding: 0 0 10 0;
-}
-
-/* ==============================
-   📝 Description
-   ============================== */
 .book-description {
     -fx-background-color: #f8f9fa;
     -fx-border-color: #dce3eb;
@@ -56,42 +24,20 @@
     -fx-pref-height: 340;
 }
 
-/* ==============================
-   🔘 Boutons
-   ============================== */
 .borrow-button {
     -fx-background-color: #4a90e2;
     -fx-text-fill: white;
     -fx-font-weight: bold;
     -fx-background-radius: 8;
     -fx-cursor: hand;
-    -fx-pref-width: 140;
-    -fx-pref-height: 35;
+    -fx-pref-width: 140px;
+    -fx-pref-height: 35px;
 }
 
 .borrow-button:hover {
     -fx-background-color: #357abd;
 }
 
-.back-button {
-    -fx-background-color: transparent;
-    -fx-text-fill: #4a90e2;
-    -fx-font-size: 13px;
-    -fx-cursor: hand;
-}
-
-.back-button:hover {
-    -fx-text-fill: #2f5c9e;
-}
-
-/* ==============================
-   ✅ Disponibilité
-   ============================== */
 #bookAvailability {
     -fx-font-weight: bold;
 }
-
-.book-available { -fx-text-fill: #28a745; }
-.book-unavailable { -fx-text-fill: #d93025; }
-
-

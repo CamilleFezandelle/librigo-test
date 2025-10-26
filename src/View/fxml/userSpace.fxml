@@ -10,18 +10,16 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="Controller.UserSpaceController"
             prefWidth="900" prefHeight="600"
-            stylesheets="@../css/userSpace.css">
+            stylesheets="@../css/global.css, @../css/userSpace.css">
 
     <children>
 
-        <!-- Logo en haut au centre -->
         <ImageView layoutX="380" layoutY="20"
                    fitWidth="140" fitHeight="140"
                    preserveRatio="true">
             <Image url="@../../images/logo.png"/>
         </ImageView>
 
-        <!-- Nom + numéro d’adhérent -->
         <Label fx:id="nameLabel"
                layoutX="40" layoutY="40"
                styleClass="account-label" />
@@ -30,28 +28,25 @@
                layoutX="40" layoutY="60"
                styleClass="account-number-label" />
 
-        <!-- Bouton déconnexion -->
-        <Button text="◀ Retourner à l’accueil"
+        <Button text="◀ Retourner à l'accueil"
                 fx:id="backButton"
                 layoutX="40" layoutY="135"
                 prefWidth="140"
                 onAction="#handleBackButton"
                 styleClass="back-button" />
 
-        <!-- Onglets -->
         <TabPane fx:id="userTabPane"
                  layoutX="40" layoutY="180"
                  prefWidth="820" prefHeight="380"
                  styleClass="user-tab-pane">
 
-            <!-- Onglet 1 : Mes emprunts -->
             <tabs>
                 <Tab text="📚 Mes emprunts" closable="false">
                     <ScrollPane fitToWidth="true"
                                 fitToHeight="true"
                                 hbarPolicy="NEVER"
                                 styleClass="tab-scroll">
-                    <content>
+                        <content>
                             <GridPane fx:id="genreContainer" hgap="20" vgap="20">
 
                                 <columnConstraints>
@@ -68,7 +63,6 @@
                     </ScrollPane>
                 </Tab>
 
-                <!-- Onglet 2 : Informations personnelles -->
                 <Tab text="👤 Informations personnelles" closable="false">
                     <AnchorPane>
                         <VBox spacing="15">
@@ -76,7 +70,7 @@
                                 <Insets top="30" right="30" bottom="30" left="30"/>
                             </padding>
 
-                            <Label text="Informations de votre compte" styleClass="info-title"/>
+                            <Label text="Informations de votre compte" styleClass="section-title"/>
 
                             <GridPane hgap="20" vgap="10">
                                 <columnConstraints>
@@ -84,17 +78,17 @@
                                     <ColumnConstraints percentWidth="70"/>
                                 </columnConstraints>
 
-                                <Label text="Nom :" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="info-label"/>
-                                <Label fx:id="userLastName" text="Fezandelle" GridPane.rowIndex="0" GridPane.columnIndex="1" styleClass="info-value"/>
+                                <Label text="Nom :" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                                <Label fx:id="userLastName" text="Fezandelle" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
 
-                                <Label text="Prénom :" GridPane.rowIndex="1" GridPane.columnIndex="0" styleClass="info-label"/>
-                                <Label fx:id="userFirstName" text="Camille" GridPane.rowIndex="1" GridPane.columnIndex="1" styleClass="info-value"/>
+                                <Label text="Prénom :" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                                <Label fx:id="userFirstName" text="Camille" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
 
-                                <Label text="Email :" GridPane.rowIndex="2" GridPane.columnIndex="0" styleClass="info-label"/>
-                                <Label fx:id="userEmail" text="camille.fe@example.com" GridPane.rowIndex="2" GridPane.columnIndex="1" styleClass="info-value"/>
+                                <Label text="Email :" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                                <Label fx:id="userEmail" text="camille.fe@example.com" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
 
-                                <Label text="Numéro d’adhérent :" GridPane.rowIndex="3" GridPane.columnIndex="0" styleClass="info-label"/>
-                                <Label fx:id="userNumber" text="#A12345" GridPane.rowIndex="3" GridPane.columnIndex="1" styleClass="info-value"/>
+                                <Label text="Numéro d'adhérent :" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                                <Label fx:id="userNumber" text="#A12345" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
                             </GridPane>
                         </VBox>
                     </AnchorPane>

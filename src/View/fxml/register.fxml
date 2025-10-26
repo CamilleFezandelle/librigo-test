@@ -9,29 +9,24 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="Controller.RegisterController"
             prefHeight="600.0" prefWidth="900.0"
-            stylesheets="@../css/register.css"
+            stylesheets="@../css/global.css, @../css/register.css"
             styleClass="root-pane">
 
-    <!-- Bande 2 colonnes FIXES : 450px | 450px -->
     <HBox layoutX="0" layoutY="0" prefWidth="900.0" prefHeight="600.0">
 
-        <!-- Gauche : 450px fixes -->
         <StackPane prefWidth="450" styleClass="left-pane">
             <ImageView fitWidth="200" preserveRatio="true">
                 <Image url="@/images/logo.png" />
             </ImageView>
         </StackPane>
 
-        <!-- Droite : 450px fixes -->
         <VBox alignment="CENTER" spacing="22"
               prefWidth="450.0" minWidth="450.0" maxWidth="450.0"
               prefHeight="600.0" minHeight="600.0" maxHeight="600.0"
-              styleClass="register-box">
+              styleClass="form-box">
 
-            <!-- Titre -->
             <Label text="Créer un compte adhérent" styleClass="title-label"/>
 
-            <!-- Formulaire (largeur contrôlée) -->
             <GridPane hgap="10" vgap="12" prefWidth="420">
                 <columnConstraints>
                     <ColumnConstraints minWidth="140" maxWidth="140" halignment="RIGHT"/>
@@ -64,13 +59,11 @@
                 <TextField fx:id="villeField"     GridPane.rowIndex="7" GridPane.columnIndex="1"/>
             </GridPane>
 
-            <!-- Boutons -->
             <VBox alignment="CENTER" spacing="10">
                 <Button fx:id="registerButton" text="S'inscrire" onAction="#handleRegisterButton" />
                 <Button fx:id="backToLoginButton" text="Retour à la connexion" onAction="#handleBackToLoginButton"/>
             </VBox>
 
-            <!-- Message d’erreur -->
             <Label fx:id="errorLabel"/>
 
         </VBox>

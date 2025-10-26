@@ -1,20 +1,13 @@
-/* ================================================
-   🎨 Libraire Dashboard
-   ================================================ */
+/* ==============================
+   LIBRAIRE DASHBOARD.CSS - Styles spécifiques
+   ============================== */
 
-AnchorPane {
-    -fx-background-color: linear-gradient(to bottom right, #f8fafc, #eef2f6);
-    -fx-font-family: "Segoe UI", sans-serif;
-}
-
-/* 🏷️ Titre principal */
 .dashboard-title {
     -fx-font-size: 28px;
     -fx-font-weight: bold;
     -fx-text-fill: #1e293b;
 }
 
-/* 🔘 Boutons libraire */
 .libraire-button {
     -fx-background-color: #fc4a1a;
     -fx-text-fill: white;
@@ -25,7 +18,6 @@ AnchorPane {
     -fx-cursor: hand;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 4, 0, 0, 2);
     -fx-min-width: 250;
-    -fx-transition: 0.3s;
 }
 
 .libraire-button:hover {
@@ -34,7 +26,6 @@ AnchorPane {
     -fx-scale-y: 1.03;
 }
 
-/* 🔗 Lien retour */
 .back-link {
     -fx-font-size: 14px;
     -fx-text-fill: #2563eb;

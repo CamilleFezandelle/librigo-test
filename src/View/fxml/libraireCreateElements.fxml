@@ -10,27 +10,22 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="Controller.LibraireCreateElementsController"
             prefWidth="900" prefHeight="600"
-            stylesheets="@../css/libraireCreateElements.css">
+            stylesheets="@../css/global.css, @../css/libraireCreateElements.css">
 
     <children>
 
-        <!-- Logo en haut au centre -->
         <ImageView layoutX="380" layoutY="20"
                    fitWidth="140" fitHeight="140"
                    preserveRatio="true">
             <Image url="@../../images/logo.png"/>
         </ImageView>
 
-        <!-- Titre de la page -->
-
-        <!-- Bouton retour -->
         <Button text="◀ Retourner au tableau de bord"
                 fx:id="backButton"
-                layoutY="40"
+                layoutX="40" layoutY="40"
                 prefWidth="250"
                 styleClass="back-button" />
 
-        <!-- Onglets -->
         <TabPane fx:id="createTabPane"
                  layoutX="40" layoutY="180"
                  prefWidth="820" prefHeight="380"
@@ -38,7 +33,6 @@
                  styleClass="create-tab-pane">
 
             <tabs>
-                <!-- Onglet 1 : Créer un livre -->
                 <Tab text="📖 Créer un livre" closable="false">
                     <ScrollPane fitToWidth="true"
                                 fitToHeight="true"
@@ -65,12 +59,12 @@
                                     <Label text="Auteur :" GridPane.rowIndex="1" GridPane.columnIndex="0" styleClass="field-label"/>
                                     <ComboBox fx:id="livreAuteur" promptText="Sélectionnez un auteur"
                                               GridPane.rowIndex="1" GridPane.columnIndex="1"
-                                              prefWidth="400" styleClass="input-field"/>
+                                              styleClass="input-field"/>
 
                                     <Label text="Genre :" GridPane.rowIndex="2" GridPane.columnIndex="0" styleClass="field-label"/>
                                     <ComboBox fx:id="livreGenre" promptText="Sélectionnez un genre"
                                               GridPane.rowIndex="2" GridPane.columnIndex="1"
-                                              prefWidth="400" styleClass="input-field"/>
+                                              styleClass="input-field"/>
 
                                     <Label text="Date de parution :" GridPane.rowIndex="3" GridPane.columnIndex="0" styleClass="field-label"/>
                                     <TextField fx:id="livreDate" promptText="YYYY"
@@ -92,14 +86,13 @@
                                         <Insets top="10"/>
                                     </padding>
                                     <Button text="✓ Créer le livre" fx:id="createLivreButton"
-                                             styleClass="create-button"/>
+                                            styleClass="create-button"/>
                                 </HBox>
                             </VBox>
                         </content>
                     </ScrollPane>
                 </Tab>
 
-                <!-- Onglet 2 : Créer un auteur -->
                 <Tab text="✍️ Créer un auteur" closable="false">
                     <ScrollPane fitToWidth="true"
                                 fitToHeight="true"
@@ -133,14 +126,13 @@
                                         <Insets top="10"/>
                                     </padding>
                                     <Button text="✓ Créer l'auteur" fx:id="createAuteurButton"
-                                             styleClass="create-button"/>
+                                            styleClass="create-button"/>
                                 </HBox>
                             </VBox>
                         </content>
                     </ScrollPane>
                 </Tab>
 
-                <!-- Onglet 3 : Créer un genre -->
                 <Tab text="🏷️ Créer un genre" closable="false">
                     <ScrollPane fitToWidth="true"
                                 fitToHeight="true"
@@ -170,7 +162,7 @@
                                         <Insets top="10"/>
                                     </padding>
                                     <Button text="✓ Créer le genre" fx:id="createGenreButton"
-                                             styleClass="create-button"/>
+                                            styleClass="create-button"/>
                                 </HBox>
                             </VBox>
                         </content>

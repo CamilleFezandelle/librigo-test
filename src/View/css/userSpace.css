@@ -1,15 +1,7 @@
-/* =========================
-   🌈 STYLE GLOBAL
-   ========================= */
-AnchorPane {
-    -fx-background-color: linear-gradient(to bottom right, #f8fafc, #e9eef3);
-    -fx-font-family: "Segoe UI", sans-serif;
-    -fx-text-fill: #1e293b;
-}
+/* ==============================
+   USERSPACE.CSS - Styles spécifiques
+   ============================== */
 
-/* =========================
-   🧍 INFOS UTILISATEUR
-   ========================= */
 .account-label {
     -fx-font-size: 18px;
     -fx-font-weight: bold;
@@ -22,19 +14,15 @@ AnchorPane {
     -fx-font-style: italic;
 }
 
-/* =========================
-   📑 ONGLET PRINCIPAL
-   ========================= */
 .user-tab-pane {
     -fx-background-color: transparent;
-    -fx-tab-min-width: 410px;  /* largeur calculée 820px/2 */
+    -fx-tab-min-width: 410px;
     -fx-tab-max-width: 410px;
     -fx-tab-min-height: 50px;
     -fx-tab-max-height: 50px;
     -fx-background-radius: 10;
 }
 
-/* --- Barre d’onglets --- */
 .user-tab-pane .tab-header-area {
     -fx-background-color: #e2e8f0;
     -fx-border-color: #cfd8dc;
@@ -43,10 +31,9 @@ AnchorPane {
     -fx-pref-height: 50px;
     -fx-max-height: 50px;
     -fx-padding: 0;
-    -fx-overflow: hidden; /* évite le débordement visuel */
+    -fx-overflow: hidden;
 }
 
-/* --- Onglets individuels --- */
 .user-tab-pane .tab {
     -fx-background-color: #f8fafc;
     -fx-font-size: 14px;
@@ -77,7 +64,6 @@ AnchorPane {
     -fx-text-fill: white;
 }
 
-/* --- Suppression du scroll horizontal et de la flèche --- */
 .user-tab-pane .tab-header-area .control-buttons-tab {
     -fx-padding: 0;
     -fx-opacity: 0;
@@ -97,135 +83,6 @@ AnchorPane {
     -fx-spacing: 0;
 }
 
-/* ==========================================================
-   📚 CARDS DES LIVRES - SECTION "MES EMPRUNTS"
-   ========================================================== */
-
-.book-card {
-    -fx-background-color: #2b2b2b;
-    -fx-background-radius: 12;
-    -fx-padding: 18;
-    -fx-spacing: 25;
-    -fx-alignment: CENTER_LEFT;
-    -fx-min-width: 380px;     /* chaque card occupe environ la moitié du container (820px / 2 - marge) */
-    -fx-max-width: 380px;
-    -fx-min-height: 120px;
-    -fx-max-height: 140px;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 8, 0, 0, 3);
-    -fx-border-color: #3a3a3a;
-    -fx-border-radius: 12;
-}
-
-.book-card:hover {
-    -fx-background-color: #333333;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.45), 12, 0, 0, 5);
-    -fx-border-color: #0078d7;
-}
-
-/* --- TITRE --- */
-.book-title {
-    -fx-font-size: 15px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #ffffff;
-    -fx-wrap-text: true;
-}
-
-/* --- AUTEUR & ANNÉE --- */
-.book-author {
-    -fx-font-size: 13px;
-    -fx-text-fill: #b0b0b0;
-}
-
-.book-year {
-    -fx-font-size: 12px;
-    -fx-text-fill: #8c8c8c;
-}
-
-/* --- DISPONIBILITÉ --- */
-.book-availability {
-    -fx-font-size: 13px;
-    -fx-font-weight: bold;
-}
-
-.book-available {
-    -fx-text-fill: #4caf50;
-}
-
-.book-unavailable {
-    -fx-text-fill: #f44336;
-}
-
-/* --- BOUTON (Rendre le livre) --- */
-.book-button {
-    -fx-background-color: #0078d7;
-    -fx-text-fill: white;
-    -fx-font-weight: bold;
-    -fx-background-radius: 8;
-    -fx-cursor: hand;
-    -fx-padding: 6 16;
-    -fx-pref-width: 120px;
-    -fx-pref-height: 34px;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 4, 0, 0, 1);
-    -fx-border-color: transparent;
-}
-
-.book-button:hover {
-    -fx-background-color: #005fa3;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,120,215,0.3), 8, 0, 0, 2);
-}
-
-/* --- Transition visuelle douce --- */
-.book-card, .book-button {
-    -fx-transition: all 0.2s ease-in-out;
-}
-
-/* ==========================================================
-   🌌 FOND DU CONTAINER (Scroll / Grid)
-   ========================================================== */
-.tab-scroll {
-    -fx-background-color: transparent;
-}
-
-#genreContainer {
-    -fx-background-color: transparent;
-    -fx-padding: 20;
-}
-
-/* ==========================================================
-   🔤 TEXTE GÉNÉRAL DES INFOS LIVRES
-   ========================================================== */
-.book-card Label {
-    -fx-font-family: "Segoe UI", sans-serif;
-}
-
-/* ==========================================================
-   🧩 SPACING DES LIGNES DANS LES CARTES
-   ========================================================== */
-.book-card VBox {
-    -fx-spacing: 5;
-}
-
-/* ===============================================
-   ✅ CORRECTIONS SCROLL + LARGEUR BOUTON
-   =============================================== */
-
-/* ScrollPane - pas de scroll horizontal */
-.tab-scroll {
-    -fx-fit-to-width: true;
-    -fx-hbar-policy: never;
-    -fx-vbar-policy: as-needed;
-    -fx-background-color: transparent;
-}
-
-/* Container principal (GridPane) */
-#genreContainer {
-    -fx-background-color: transparent;
-    -fx-padding: 20 10 40 10;
-    -fx-hgap: 20;
-    -fx-vgap: 20;
-}
-
-/* Book card - largeur ajustable et propre */
 .book-card {
     -fx-background-color: #2b2b2b;
     -fx-background-radius: 12;
@@ -239,7 +96,34 @@ AnchorPane {
     -fx-max-width: Infinity;
 }
 
-/* bouton fixe */
+.book-card:hover {
+    -fx-background-color: #333333;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.45), 12, 0, 0, 5);
+    -fx-border-color: #0078d7;
+}
+
+.book-title {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-wrap-text: true;
+}
+
+.book-author {
+    -fx-font-size: 13px;
+    -fx-text-fill: #b0b0b0;
+}
+
+.book-year {
+    -fx-font-size: 12px;
+    -fx-text-fill: #8c8c8c;
+}
+
+.book-availability {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
 .book-button {
     -fx-background-color: #0078d7;
     -fx-text-fill: white;
@@ -254,15 +138,16 @@ AnchorPane {
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 4, 0, 0, 1);
 }
 
-.back-button {
-    -fx-background-color: transparent;
-    -fx-text-fill: #4a90e2;
-    -fx-font-size: 13px;
-    -fx-cursor: hand;
+.book-button:hover {
+    -fx-background-color: #005fa3;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,120,215,0.3), 8, 0, 0, 2);
 }
 
-.back-button:hover {
-    -fx-text-fill: #2f5c9e;
+#genreContainer {
+    -fx-background-color: transparent;
+    -fx-padding: 20 10 40 10;
+    -fx-hgap: 20;
+    -fx-vgap: 20;
 }
 
 .book-reservation-date {

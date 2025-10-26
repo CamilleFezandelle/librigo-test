@@ -3,15 +3,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
-
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
-<?import javafx.collections.FXCollections?>
-<?import java.lang.String?>
+
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="Controller.DashboardController"
-            prefWidth="900" prefHeight="600">
+            prefWidth="900" prefHeight="600"
+            stylesheets="@../css/global.css, @../css/dashboard.css">
 
     <children>
 
@@ -23,28 +22,24 @@
 
         <Label fx:id="nameAccountLabel"
                layoutX="40" layoutY="40"
-               stylesheets="@../css/dashboard.css"
                styleClass="account-label"/>
 
         <Label fx:id="numberAccountLabel"
                layoutX="40" layoutY="60"
                style="-fx-font-size: 14px;"
-               stylesheets="@../css/dashboard.css"
                styleClass="account-number-label"/>
 
-        <Button text="➜]  Se déconnecter"
+        <Button text="➜  Se déconnecter"
                 fx:id="logoutButton"
                 onAction="#handleLogoutButton"
                 layoutX="40" layoutY="90"
                 prefWidth="120" prefHeight="20"
-                stylesheets="@../css/dashboard.css"
                 styleClass="logout-button"/>
 
         <Button text="🙍  Mon espace"
                 fx:id="spaceButton"
                 layoutX="40" layoutY="120"
                 prefWidth="140" prefHeight="35"
-                stylesheets="@../css/dashboard.css"
                 onAction="#handleSpaceButton"
                 styleClass="account-button"/>
 
@@ -53,26 +48,22 @@
                 layoutX="200" layoutY="120"
                 prefWidth="140" prefHeight="35"
                 onAction="#handleLibraireButton"
-                stylesheets="@../css/dashboard.css"
                 styleClass="libraire-button"/>
 
         <TextField fx:id="searchField"
                    layoutX="610" layoutY="65"
                    prefWidth="250"
                    promptText="Rechercher un livre ou un auteur..."
-                   stylesheets="@../css/dashboard.css"
                    styleClass="search-field" />
 
         <ComboBox fx:id="genreSelect"
                   layoutX="610" layoutY="120"
                   prefWidth="250"
-                  promptText="Choisir un genre"
-                  stylesheets="@../css/dashboard.css" />
+                  promptText="Choisir un genre" />
 
         <ScrollPane fitToWidth="true"
                     layoutX="40" layoutY="180"
-                    prefWidth="820" prefHeight="380"
-                    stylesheets="@../css/dashboard.css">
+                    prefWidth="820" prefHeight="380">
             <content>
                 <GridPane fx:id="genreContainer" hgap="20" vgap="20">
 

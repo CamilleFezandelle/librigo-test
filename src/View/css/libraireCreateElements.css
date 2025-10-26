@@ -1,48 +1,23 @@
-/* =========================
-   🌈 STYLE GLOBAL
-   ========================= */
-AnchorPane {
-    -fx-background-color: linear-gradient(to bottom right, #f8fafc, #e9eef3);
-    -fx-font-family: "Segoe UI", sans-serif;
-    -fx-text-fill: #1e293b;
+/* ==============================
+   LIBRAIRE CREATE ELEMENTS.CSS - Styles spécifiques
+   ============================== */
+
+.field-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #334155;
+    -fx-alignment: CENTER_LEFT;
 }
 
-/* =========================
-   🎨 TITRE DE PAGE
-   ========================= */
-.page-title {
-    -fx-font-size: 20px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #1e293b;
-}
-
-/* =========================
-   🔙 BOUTON RETOUR
-   ========================= */
-.back-button {
-    -fx-background-color: transparent;
-    -fx-text-fill: #4a90e2;
-    -fx-font-size: 13px;
-    -fx-cursor: hand;
-}
-
-.back-button:hover {
-    -fx-text-fill: #2f5c9e;
-}
-
-/* =========================
-   📑 ONGLET PRINCIPAL
-   ========================= */
 .create-tab-pane {
     -fx-background-color: transparent;
-    -fx-tab-min-width: 272px;  /* largeur calculée 820px/3 = 273.33, on met 272 pour éviter le scroll */
+    -fx-tab-min-width: 272px;
     -fx-tab-max-width: 272px;
     -fx-tab-min-height: 50px;
     -fx-tab-max-height: 50px;
     -fx-background-radius: 10;
 }
 
-/* --- Barre d'onglets --- */
 .create-tab-pane .tab-header-area {
     -fx-background-color: #e2e8f0;
     -fx-border-color: #cfd8dc;
@@ -58,7 +33,6 @@ AnchorPane {
     -fx-background-color: #e2e8f0;
 }
 
-/* Masquer complètement le scroll horizontal */
 .create-tab-pane .tab-header-area .scroll-pane {
     -fx-hbar-policy: never;
 }
@@ -71,7 +45,6 @@ AnchorPane {
     visibility: hidden;
 }
 
-/* --- Onglets individuels --- */
 .create-tab-pane .tab {
     -fx-background-color: #f8fafc;
     -fx-font-size: 13px;
@@ -86,6 +59,11 @@ AnchorPane {
     -fx-max-width: 272px;
 }
 
+.create-tab-pane .tab .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-alignment: CENTER;
+}
+
 .create-tab-pane .tab:hover {
     -fx-background-color: #f1f5f9;
 }
@@ -96,13 +74,17 @@ AnchorPane {
 
 .create-tab-pane .tab-label {
     -fx-text-fill: #334155;
+    -fx-alignment: CENTER;
 }
 
 .create-tab-pane .tab:selected .tab-label {
     -fx-text-fill: white;
 }
 
-/* --- Suppression du scroll horizontal et de la flèche --- */
+.create-tab-pane .tab .tab-container {
+    -fx-alignment: CENTER;
+}
+
 .create-tab-pane .tab-header-area .control-buttons-tab {
     -fx-padding: 0;
     -fx-opacity: 0;
@@ -120,204 +102,8 @@ AnchorPane {
     -fx-alignment: CENTER;
     -fx-hgap: 0;
     -fx-spacing: 0;
-    -fx-max-width: 820px;
-    -fx-pref-width: 820px;
 }
 
-/* Forcer le masquage du scroll horizontal */
-.create-tab-pane .tab-header-area .tab-header-background {
-    -fx-pref-width: 820px;
-    -fx-max-width: 820px;
-}
-
-/* =========================
-   📋 SCROLLPANE
-   ========================= */
-.tab-scroll {
-    -fx-fit-to-width: true;
-    -fx-hbar-policy: never;
-    -fx-vbar-policy: as-needed;
-    -fx-background-color: transparent;
-}
-
-/* =========================
-   📝 FORMULAIRES
-   ========================= */
-.section-title {
-    -fx-font-size: 16px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #1e293b;
-    -fx-padding: 0 0 10 0;
-}
-
-.field-label {
-    -fx-font-size: 14px;
-    -fx-font-weight: 600;
-    -fx-text-fill: #334155;
-    -fx-alignment: CENTER_LEFT;
-}
-
-/* =========================
-   🔤 CHAMPS DE SAISIE - BASE
-   ========================= */
-.input-field {
-    -fx-background-color: white;
-    -fx-background-radius: 6;
-    -fx-border-color: #cbd5e1;
-    -fx-border-width: 1;
-    -fx-border-radius: 6;
-    -fx-padding: 8 12;
-    -fx-font-size: 13px;
-    -fx-text-fill: #1e293b;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 2, 0, 0, 1);
-}
-
-.input-field:focused {
-    -fx-border-color: #0078d7;
-    -fx-background-color: white;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,120,215,0.15), 4, 0, 0, 1);
-}
-
-/* =========================
-   📝 TEXTFIELD
-   ========================= */
-TextField.input-field {
-    -fx-min-height: 36px;
-    -fx-pref-height: 36px;
-    -fx-max-height: 36px;
-}
-
-TextField.input-field:focused {
-    -fx-min-height: 36px;
-    -fx-pref-height: 36px;
-    -fx-max-height: 36px;
-    -fx-border-width: 1;
-}
-
-/* =========================
-   📄 TEXTAREA
-   ========================= */
-TextArea.input-field {
-    -fx-min-height: 100px;
-    -fx-pref-height: 100px;
-}
-
-TextArea.input-field:focused {
-    -fx-border-width: 1;
-}
-
-TextArea.input-field .content {
-    -fx-background-color: white;
-    -fx-padding: 8 12;
-}
-
-TextArea.input-field .scroll-pane {
-    -fx-background-color: white;
-    -fx-border-color: transparent;
-}
-
-TextArea.input-field .scroll-pane .viewport {
-    -fx-background-color: white;
-}
-
-TextArea.input-field .scroll-pane .content {
-    -fx-background-color: white;
-}
-
-/* =========================
-   📦 COMBOBOX
-   ========================= */
-ComboBox.input-field {
-    -fx-background-color: white;
-    -fx-min-height: 36px;
-    -fx-pref-height: 36px;
-    -fx-max-height: 36px;
-}
-
-ComboBox.input-field:focused {
-    -fx-min-height: 36px;
-    -fx-pref-height: 36px;
-    -fx-max-height: 36px;
-    -fx-border-width: 1;
-}
-
-ComboBox.input-field .list-cell {
-    -fx-background-color: white;
-    -fx-text-fill: #1e293b;
-    -fx-padding: 8 12;
-    -fx-min-height: 36px;
-    -fx-pref-height: 36px;
-}
-
-ComboBox.input-field .list-cell:hover {
-    -fx-background-color: #f1f5f9;
-}
-
-ComboBox.input-field .arrow-button {
-    -fx-padding: 0 8 0 0;
-    -fx-min-height: 36px;
-    -fx-pref-height: 36px;
-    -fx-max-height: 36px;
-}
-
-ComboBox.input-field .arrow {
-    -fx-background-color: #64748b;
-}
-
-/* Menu déroulant du ComboBox */
-.combo-box-popup .list-view {
-    -fx-background-color: white;
-    -fx-border-color: #cbd5e1;
-    -fx-border-width: 1;
-    -fx-border-radius: 6;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 8, 0, 0, 2);
-}
-
-.combo-box-popup .list-view .list-cell {
-    -fx-background-color: white;
-    -fx-text-fill: #1e293b;
-    -fx-padding: 8 12;
-}
-
-.combo-box-popup .list-view .list-cell:hover {
-    -fx-background-color: #f1f5f9;
-}
-
-.combo-box-popup .list-view .list-cell:selected {
-    -fx-background-color: #e0f2fe;
-    -fx-text-fill: #0078d7;
-}
-
-/* =========================
-   📅 DATEPICKER
-   ========================= */
-DatePicker.input-field {
-    -fx-background-color: white;
-    -fx-min-height: 36px;
-    -fx-pref-height: 36px;
-    -fx-max-height: 36px;
-}
-
-DatePicker.input-field:focused {
-    -fx-min-height: 36px;
-    -fx-pref-height: 36px;
-    -fx-max-height: 36px;
-    -fx-border-width: 1;
-}
-
-DatePicker.input-field .date-picker-display-node {
-    -fx-background-color: white;
-}
-
-DatePicker.input-field .arrow-button {
-    -fx-min-height: 36px;
-    -fx-pref-height: 36px;
-    -fx-max-height: 36px;
-}
-
-/* =========================
-   🔘 BOUTONS D'ACTION
-   ========================= */
 .create-button {
     -fx-background-color: #10b981;
     -fx-text-fill: white;
@@ -358,9 +144,6 @@ DatePicker.input-field .arrow-button {
     -fx-effect: dropshadow(three-pass-box, rgba(100,116,139,0.3), 6, 0, 0, 2);
 }
 
-/* =========================
-   📜 LISTE DES GENRES
-   ========================= */
 .genre-list {
     -fx-background-color: white;
     -fx-background-radius: 8;
